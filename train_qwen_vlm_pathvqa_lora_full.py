@@ -9,7 +9,7 @@ from trl import SFTTrainer, SFTConfig
 
 MODEL_NAME = "unsloth/Qwen3.5-2B"
 RANK = 64
-TOP_K = 2000
+# TOP_K = 2000
 SEED = 3407
 OUTPUT_DIR = f"outputs_{RANK}"
 SAVE_DIR = f"qwen_lora_rank_{RANK}"
@@ -64,7 +64,7 @@ def main():
 
     print("Loading PathVQA dataset...")
     dataset = load_dataset("flaviagiammarino/path-vqa", split="train")
-    dataset = dataset.select(range(TOP_K))
+    # dataset = dataset.select(range(TOP_K))
     dataset = dataset.train_test_split(test_size=0.1, seed=SEED)
 
     train_dataset = dataset["train"]

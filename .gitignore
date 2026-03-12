@@ -1,0 +1,32 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Logs
+logs/
+*.out
+*.err
+
+# Training outputs / checkpoints
+outputs_*/
+checkpoint-*/
+qwen_lora_rank_*/
+*.safetensors
+*.bin
+*.pt
+*.ckpt
+
+# Unsloth / compiled cache
+unsloth_compiled_cache/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
